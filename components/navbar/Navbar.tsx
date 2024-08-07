@@ -4,6 +4,8 @@ import Theme from './Theme'
 import { sidebarLinks } from '@/constants'
 import Link from 'next/link'
 import Image from 'next/image'
+import Sidebar from './Sidebar'
+  
 
 const Navbar = () => {
   const [active, setActive] = useState('Home')
@@ -22,13 +24,15 @@ const Navbar = () => {
                   onClick={() => setActive(item.label)}   
               >
                   {/* <Image src={item.imgURL} alt='label' width={30} height={30} className='invert' /> */}
-                  <p className='body-medium md:line-clamp-1'>{item.label}</p>
+                  <p className='text-[16px] font-[400] text-gray-500 dark:text-gray-300 hover:text-black
+                  hover:font-bold md:line-clamp-1'>{item.label}</p>
               </Link>
           ))}
         </div>
         <div className='flex flex-row gap-6 justify-between items-center'>
             <Theme />
             Icon
+            <Sidebar />
         </div>
     </nav>
   )

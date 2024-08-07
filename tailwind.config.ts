@@ -10,37 +10,6 @@ const config = {
   ],
   prefix: "",
   theme: {
-    colors: {
-      background: {
-        900: "#FFFFFF",
-        850: "#FAF8F0",
-        800: "#F5F1E0",
-        700: "#F0EAD1",
-        500: "#EBE3C1",
-        400: "#E6DCB2"
-      },
-      primary: {
-        600: "#4D9358",
-        500: "#54A05F",
-        100: "#87C08F",
-      },
-      dark: {
-        100: "#000000",
-        200: "#0F1117",
-        300: "#151821",
-        400: "#212734",
-        500: "#101012",
-      },
-      light: {
-        900: "#FFFFFF",
-        800: "#F4F6F8",
-        850: "#FDFDFD",
-        700: "#DCE3F1",
-        500: "#7B8EC8",
-        400: "#858EAD",
-      },
-      "accent-blue": "#1DA1F2",
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -49,6 +18,37 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        background: {
+          900: "#FFFFFF",
+          850: "#FAF8F0",
+          800: "#F5F1E0",
+          700: "#F0EAD1",
+          500: "#EBE3C1",
+          400: "#E6DCB2"
+        },
+        primary: {
+          600: "#4D9358",
+          500: "#54A05F",
+          100: "#87C08F",
+        },
+        dark: {
+          100: "#000000",
+          200: "#0F1117",
+          300: "#151821",
+          400: "#212734",
+          500: "#101012",
+        },
+        light: {
+          900: "#FFFFFF",
+          800: "#F4F6F8",
+          850: "#FDFDFD",
+          700: "#DCE3F1",
+          500: "#7B8EC8",
+          400: "#858EAD",
+        },
+        "accent-blue": "#1DA1F2",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
