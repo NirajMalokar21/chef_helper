@@ -1,7 +1,7 @@
-export default async function Home () {
+export default async function TopChefs () {
     return (
         <section className="pt-28">
-            <h1>Home</h1>
+            <h1>Top Chefs</h1>
         </section>
     )
 }

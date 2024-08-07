@@ -18,12 +18,12 @@ export const sidebarLinks: SidebarLink[] = [
   },
   {
     imgURL: "/assets/icons/users.svg",
-    route: "/chefs",
+    route: "/top-chefs",
     label: "Top Chefs",
   },
   {
     imgURL: "/assets/icons/suitcase.svg",
-    route: "/ai-helper",
+    route: "/ai-help",
     label: "AI Help",
   },
   {
@@ -38,7 +38,7 @@ export const sidebarLinks: SidebarLink[] = [
   },
   {
     imgURL: "/assets/icons/question.svg",
-    route: "/post-recipes",
+    route: "/post-recipe",
     label: "Post a Recipe",
   },
 ];
