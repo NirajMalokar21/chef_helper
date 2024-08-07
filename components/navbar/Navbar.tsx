@@ -1,13 +1,15 @@
 import React from 'react'
+import Theme from './Theme'
 
 const Navbar = () => {
   return (
     <nav className='flex flex-row justify-between items-center background-light900_dark200 px-16 py-6'>
         <div className='h1-bold'>
-            NavBar
+            <p>Help<span className='text-primary-500'>Chef</span></p>
         </div>
-        <div className=''>
-            Theme
+        <div className='flex flex-row gap-6 justify-between items-center'>
+            <Theme />
+            Icon
         </div>
     </nav>
   )
