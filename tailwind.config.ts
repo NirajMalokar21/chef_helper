@@ -11,9 +11,18 @@ const config = {
   prefix: "",
   theme: {
     colors: {
+      background: {
+        900: "#FFFFFF",
+        850: "#FAF8F0",
+        800: "#F5F1E0",
+        700: "#F0EAD1",
+        500: "#EBE3C1",
+        400: "#E6DCB2"
+      },
       primary: {
-        500: "#FF7000",
-        100: "#FFF1E6",
+        600: "#4D9358",
+        500: "#54A05F",
+        100: "#87C08F",
       },
       dark: {
         100: "#000000",
