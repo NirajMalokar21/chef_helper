@@ -12,9 +12,9 @@ interface SidebarLink {
 
 export const sidebarLinks: SidebarLink[] = [
   {
-    imgURL: "/assets/icons/home.svg",
-    route: "/",
-    label: "Home",
+    imgURL: "/assets/icons/list.svg",
+    route: "/shop-list",
+    label: " My Grocery List",
   },
   {
     imgURL: "/assets/icons/users.svg",

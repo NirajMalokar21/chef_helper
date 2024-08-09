@@ -19,9 +19,9 @@ const Navbar = () => {
   const [active, setActive] = useState('Home')
   return (
     <nav className='flex flex-row z-10 fixed w-full justify-between items-center background-light900_dark300 px-16 py-6 shadow-sm'>
-        <div className='h1-bold'>
+        <Link href='/' className='h1-bold'>
             <p className='text-dark100_light900'>Help<span className='text-primary-500'>Chef</span></p>
-        </div>
+        </Link>
         <div className='lg:flex flex-row justify-center items-center px-8 gap-10 hidden'>
           {sidebarLinks.map((item,i) => (
               <Link 
