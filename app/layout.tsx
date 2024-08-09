@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from 'next/font/google'
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeProvider";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter ({
   subsets: ['latin'],
@@ -25,12 +26,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      appearance={{
+        elements: {
+          formButtonPrimary: 'primary-gradient',
+          footerActionLink: 'primary-text-gradient hover: text-primary-500'
+        }
+      }}
+    >
+      <html lang="en">
+        <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
