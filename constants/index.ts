@@ -14,7 +14,7 @@ export const sidebarLinks: SidebarLink[] = [
   {
     imgURL: "/assets/icons/list.svg",
     route: "/shop-list",
-    label: " My Grocery List",
+    label: "Grocery List",
   },
   {
     imgURL: "/assets/icons/users.svg",

@@ -5,7 +5,7 @@ import { sidebarLinks } from '@/constants'
 import Link from 'next/link'
 import Image from 'next/image'
 import Sidebar from './Sidebar'
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import {
     Popover,
     PopoverContent,
@@ -37,45 +37,50 @@ const Navbar = () => {
               </Link>
           ))}
         </div>
-        <div className='flex flex-row md:gap-6 sm:gap-4 justify-between items-center'>
+        <div className='flex flex-row md:gap-6 sm:gap-4 sm:px-2 justify-between items-center'>
             <Theme />
-            <div className='items-center hidden lg:flex w-full'>
-                <Popover>
-                    <PopoverTrigger>Sign-in</PopoverTrigger>
-                    <PopoverContent>
-                        <div className='flex flex-row items-center justify-evenly gap-4 w-full'>
-                            <SignedOut>
+            <SignedOut>
+                <div className='items-center hidden lg:flex w-full'>
+                    <Popover>
+                        <PopoverTrigger>
+                            <div className='flex items-center justify-center rounded-full px-4 py-2
+                            bg-primary-600'>
+                                <p className='text-white paragraph-regular'>Sign-in</p>
+                            </div>
+                        </PopoverTrigger>
+                        <PopoverContent>
+                            <div className='flex flex-row items-center justify-evenly gap-4 w-full'>
                                 <Link href="/sign-in">
-                                    <Button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg 
+                                    <Button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg
                                     px-4 py-3 shadow-none gap-3">
-                                    <Image 
+                                    <Image
                                         src="/assets/icons/account.svg"
                                         alt="login"
                                         width={20}
                                         height={20}
                                         className="invert-colors"
-                                    /> 
+                                    />
                                     <span className="primary-text-gradient">Log In</span>
                                     </Button>
                                 </Link>
                                 <Link href="/sign-up">
-                                    <Button className='small-medium light-border-2 btn-tertiary text-dark400_light900 min-h-[41px] 
+                                    <Button className='small-medium light-border-2 btn-tertiary text-dark400_light900 min-h-[41px]
                                     w-full rounded-lg border px-4 py-3 gap-3 shadow-none'>
-                                    <Image 
+                                    <Image
                                         src="/assets/icons/sign-up.svg"
                                         alt="sign up"
                                         width={20}
                                         height={20}
                                         className="invert-colors"
-                                    /> 
+                                    />
                                     <span className="">Sign up</span>
                                     </Button>
                                 </Link>
-                            </SignedOut>
-                        </div>
-                    </PopoverContent>
-                </Popover>   
-                </div>
+                            </div>
+                        </PopoverContent>
+                    </Popover>
+                    </div>
+            </SignedOut>
                 <SignedIn>
                     <UserButton />
                 </SignedIn>
