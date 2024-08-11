@@ -1,7 +1,9 @@
+import Intro from "@/components/homeSections/Intro";
+
 export default async function Home () {
     return (
-        <section className="pt-28">
-            <h1>Home</h1>
-        </section>
+        <main className="flex flex-row">
+            <Intro />
+        </main>
     )
 }
