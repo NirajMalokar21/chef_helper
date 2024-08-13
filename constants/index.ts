@@ -42,3 +42,30 @@ export const sidebarLinks: SidebarLink[] = [
     label: "Post a Recipe",
   },
 ];
+
+export const topRecipes = [
+  {
+    id: 1,
+    imgURL: '/images/chickenRec.jpeg',
+    title: 'Spicy Fried Chicken',
+    tags: ['Chicken', 'Spicy', 'Fried']
+  },
+  {
+    id: 2,
+    imgURL: '/images/chickenRec.jpeg',
+    title: 'Spicy Fried Chicken',
+    tags: ['Chicken', 'Spicy', 'Fried']
+  },
+  {
+    id: 3,
+    imgURL: '/images/chickenRec.jpeg',
+    title: 'Spicy Fried Chicken',
+    tags: ['Chicken', 'Spicy', 'Fried']
+  },
+  {
+    id: 4,
+    imgURL: '/images/chickenRec.jpeg',
+    title: 'Spicy Fried Chicken',
+    tags: ['Chicken', 'Spicy', 'Fried']
+  },
+]
