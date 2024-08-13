@@ -21,11 +21,11 @@ const config = {
       colors: {
         background: {
           900: "#FFFFFF",
-          850: "#FAF8F0",
-          800: "#F5F1E0",
-          700: "#F0EAD1",
-          500: "#EBE3C1",
-          400: "#E6DCB2"
+          850: "#F5F5F4",
+          800: "#ECECEA",
+          700: "#E2E2DF",
+          500: "#D8D8D4",
+          400: "#CFCFC9"
         },
         primary: {
           600: "#4D9358",

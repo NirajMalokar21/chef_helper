@@ -7,7 +7,7 @@ const Intro = () => {
     lg:ml-16 lg:mr-24 md:ml-6 md:mr-6 max-sm:ml-3 max-sm:mr-3">
         <div className="flex flex-col justify-center text-center items-center max-sm:gap-2 md:gap-4 text-dark100_light900  
         max-sm:pt-6 md:pt-12">
-            <div className='flex flex-col justify-center items-center gap-4'>
+            <div className='flex flex-col justify-center items-center gap-4 pb-4'>
                 <h1 className="h1-bold max-sm:text-3xl md:text-4xl lg:text-5xl">
                     Welcome to Your Ultimate Cooking Companion!
                 </h1>

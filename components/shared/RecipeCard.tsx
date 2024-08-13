@@ -14,7 +14,8 @@ interface RecipeCardProps {
 const RecipeCard = ({title, imgUrl, tags, chefName, chefPic}: RecipeCardProps) => {
   return (
     <div className='flex flex-col justify-center items-center max-md:w-full gap-2'>
-        <Link href='/' className='h-52 rounded-xl relative group md:w-[250px] max-md:w-full'
+        <Link href='/' className='h-52 rounded-xl relative group md:w-[250px] max-md:w-full 
+        shadow-xl border-x-2 border-t-2 border-gray-200'
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover", backgroundPosition:
         "center", overflow: "hidden" }}>
             <div className='absolute bottom-4 left-4 flex gap-3 flex-row items-center justify-start'>
