@@ -11,7 +11,7 @@ const TagSection = ({tags}: TagSectionProps) => {
     <div className='flex flex-row gap-3 justify-center items-start'>
       {tags.map((tag,i) => (
         <Link href='/' key={i}>
-          <Badge className='bg-primary-500 md:max-w-[75px] max-md:max-w-[200px]'>
+          <Badge className='bg-primary-500 dark:bg-primary-100 md:max-w-[75px] max-md:max-w-[200px]'>
             <p className='body-semibold line-clamp-1'>{tag}</p>
           </Badge>
         </Link>
