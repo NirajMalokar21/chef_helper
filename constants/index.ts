@@ -69,3 +69,30 @@ export const topRecipes = [
     tags: ['Chicken', 'Spicy', 'Fried']
   },
 ]
+
+export const features = [
+  {
+    id: 1,
+    imgUrl: '/assets/icons/suitcase.svg',
+    title: 'AI Help Tools',
+    description: 'Discover the power of AI in your kitchen with tools that generate recipes based on your preferences and suggest meals tailored to the ingredients you have on hand. Effortlessly plan your meals and explore new culinary possibilities.',
+  },
+  {
+    id: 2,
+    imgUrl: '/assets/icons/users.svg',
+    title: 'Chef Communnity',
+    description: 'Connect with fellow chefs and food enthusiasts in a vibrant community. Share tips, exchange recipes, and get inspired by others’ culinary creations to elevate your cooking skills and enjoy a shared passion for food.',
+  },
+  {
+    id: 3,
+    imgUrl: '/assets/icons/list.svg',
+    title: 'Grocery List',
+    description: 'Streamline your shopping with a convenient grocery list feature. Easily import ingredients directly from recipes, track what you need to buy, and organize items by category. Ensure you never forget a crucial ingredient and simplify your grocery trips.',
+  },
+  {
+    id: 4,
+    imgUrl: '/assets/icons/question.svg',
+    title: 'Post Recipes',
+    description: 'Share your favorite recipes with the community and inspire others with your culinary creations. Upload and showcase your dishes, complete with detailed instructions, ingredients, and personal touches to engage and help fellow food lovers.',
+  },
+]
