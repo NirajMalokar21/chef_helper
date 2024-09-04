@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default async function ShopList () {
-    const groceryLists = [
+    let groceryLists = [
         {
             title: "Biryani Ingredients",
             description: "Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani Mmmmmm Biryani"
