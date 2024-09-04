@@ -45,9 +45,9 @@ const Features = () => {
                     className={`${item.title === 'Grocery List' ? mode === 'dark' ? 'invert' : '' :  mode === 'dark' ? '' : 'invert'}`}
                   />
                 </div>
-                <h2 className="text-xl font-semibold">{item.title}</h2>
+                <h2 className="text-xl font-semibold text-dark100_light900">{item.title}</h2>
               </div>
-              <p>{item.description}</p>
+              <p className="paragraph-medium text-dark100_light900">{item.description}</p>
             </div>
             ))
           }
