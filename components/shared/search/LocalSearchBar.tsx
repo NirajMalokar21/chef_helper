@@ -18,7 +18,7 @@ const LocalSearchBar = (params: LocalSearchParams) => {
             height={30}
             width={30}
         />
-        <Input type='string' placeholder={placeholder} className={`${addedClasses}`} />
+        <Input type='string' placeholder={placeholder} className={`${addedClasses} h-[60px]`} />
     </div>
   )
 }
