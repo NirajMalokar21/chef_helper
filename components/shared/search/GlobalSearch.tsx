@@ -19,7 +19,7 @@ const GlobalSearch = () => {
                 type='text'
                 placeholder='Search For Recipes, Users, or Ingredients!'
                 className='base-medium no-focus text-dark400_light700 placeholder:text-gray-400
-                placeholder:dark:text-gray-400 background-light900_dark300
+                placeholder:dark:text-gray-400 bg-light-900 dark:bg-dark-300
                 border-none focus:border-none shadow-none focus:outline-none outline-none'
             />
         </div>
