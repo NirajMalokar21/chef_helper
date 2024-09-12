@@ -1,4 +1,4 @@
-import ChefCard from "@/components/shared/ChefCard";
+import ChefCard from "@/components/shared/cards/ChefCard";
 import LocalSearchBar from "@/components/shared/search/LocalSearchBar";
 
 export default async function TopChefs () {

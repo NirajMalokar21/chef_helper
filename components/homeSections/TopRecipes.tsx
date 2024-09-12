@@ -1,5 +1,5 @@
 import { topRecipes } from '@/constants'
-import RecipeCard from '../shared/RecipeCard'
+import RecipeCard from '../shared/cards/RecipeCard'
 
 const TopRecipes = () => {
   return (
