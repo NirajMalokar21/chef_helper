@@ -1,6 +1,7 @@
 import UserSection from "@/components/shared/UserSection";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = async({ params }: { params: { id: string }}) => {
     return (
@@ -15,8 +16,13 @@ const Page = async({ params }: { params: { id: string }}) => {
                 stars={2}
             />
             <div className="flex flex-row justify-center items-center gap-4 w-full">
-                <Button className="w-full max-w-[250px] font-semibold text-lg bg-primary-600">Saved Recipes</Button>
-                <Button className="w-full max-w-[250px] font-semibold text-lg bg-primary-600">My Recipes</Button>
+                <Link href='/profile/1255/saved'>
+                    <Button className="w-full max-w-[250px] font-semibold text-lg bg-primary-600">Saved Recipes</Button>
+                </Link>
+                
+                <Link href='/profile/1255/my-recipes'>
+                    <Button className="w-full max-w-[250px] font-semibold text-lg bg-primary-600">My Recipes</Button>
+                </Link>
             </div>
         </section>
     )
