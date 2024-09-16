@@ -15,7 +15,7 @@ const AddIngredient = () => {
                 <Input type='string' placeholder='Eg:200gm or 20ml' className='h-[50px] shadow-lg px-2' />
             </div>
         </div>
-        <Button className='bg-primary-600 dark:bg-primary-600 dark:text-light-900 font-semibold h-[50px] text-md w-full max-w-[900px]'>Submit</Button>
+        <Button className='bg-primary-600 dark:bg-primary-600 dark:text-light-900 font-semibold h-[50px] text-md w-full max-w-[900px]'>Add</Button>
     </div>
   )
 }
