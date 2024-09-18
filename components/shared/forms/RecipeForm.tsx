@@ -3,6 +3,7 @@
 import AddIngredient from "@/components/shop-listComps/AddIngredient"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import AddInstruction from "../AddInstruction"
 
 const RecipeForm = () => {
   return (
@@ -24,7 +25,13 @@ const RecipeForm = () => {
                 w-full p-2"/>
             </div>
             <AddIngredient />
-            <Button type="submit">Submit</Button>
+            <AddInstruction />
+            <div className="flex flex-col gap-2 w-full pb-12">
+                <label className="text-dark100_light900 p-2">Time needed to cook<span className='text-red-500'>*</span></label>
+                <Input type="number" placeholder="Enter number of minutes" className="bg-gray-300 dark:bg-slate-950
+                w-full p-2"/>
+            </div>
+            <Button type="submit" className="py-4 mb-4">Submit</Button>
         </form>
     </div>
   )
