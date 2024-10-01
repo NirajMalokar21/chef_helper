@@ -41,6 +41,7 @@ const AddIngredient = () => {
             </div>
         </div>
         <Button 
+          type='button'
           className='bg-primary-600 dark:bg-primary-600 dark:text-light-900 font-semibold h-[50px] text-md w-full'
           onClick={handleClick}
         >
@@ -48,7 +49,11 @@ const AddIngredient = () => {
         </Button>
         <div className='flex flex-row justify-center items-center gap-3'>
           <ol>
-            {}
+            {
+              ingredients.map((item,i) => (
+                <li key={i}>{item?.quantity} {item.name}</li>
+              ))
+            }
           </ol>
         </div>
     </div>
