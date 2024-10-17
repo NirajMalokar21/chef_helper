@@ -7,10 +7,10 @@ export interface CreateUserParams {
 }
 
 export interface addShopListParams{
-  clerkId: string;
+  clerkId: string | null;
   title: string;
   description: string;
-  ingredients: {
+  ingredients?: {
     ingredient: string;
     owned: boolean;
   };

@@ -68,17 +68,15 @@ export async function addShopList(listData: addShopListParams){
             return null;
         }
 
-        const newShopList = {
-            title,
+        const newShopList =  await ShopList.create({
+            title, 
             description,
-            ingredients,
-        };
-
-        await ShopList.create(newShopList)
+            ingredients
+        })
 
         const user = await User.findOneAndUpdate(
             { clerkId },
-            { $push: { shopLists: newShopList }},
+            { $push: { shopLists: newShopList._id }},
             { new: true }
         );
 
