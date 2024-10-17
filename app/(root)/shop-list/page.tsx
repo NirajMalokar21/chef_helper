@@ -1,8 +1,13 @@
 import LocalSearchBar from "@/components/shared/search/LocalSearchBar"
+import { getUser } from "@/lib/actions/user.action"
+import { auth } from "@clerk/nextjs/server"
 import Image from "next/image"
 import Link from "next/link"
 
 export default async function ShopList () {
+    const { userId } = auth()
+    const user = await getUser(userId);
+    
     let groceryLists = [
         {
             title: "Biryani Ingredients",
