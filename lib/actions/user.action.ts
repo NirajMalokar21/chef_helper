@@ -57,36 +57,6 @@ export async function getShopLists(clerkId: string | null){
     }
 }
 
-export async function addShopList(listData: addShopListParams){
-    try {
-        await connectToDatabse();
-
-        const { clerkId, title, description, ingredients } = listData;
-
-        console.log("Adding shop list");
-        if(!clerkId){
-            return null;
-        }
-
-        const newShopList =  await ShopList.create({
-            title, 
-            description,
-            ingredients
-        })
-
-        const user = await User.findOneAndUpdate(
-            { clerkId },
-            { $push: { shopLists: newShopList._id }},
-            { new: true }
-        );
-
-        console.log('Shop list added');
-        return user?.shopLists;
-
-    } catch (error) {
-        console.log(error)
-    }
-}
 
 export async function createUser(userData: CreateUserParams){
     try {

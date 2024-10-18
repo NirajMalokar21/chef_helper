@@ -17,9 +17,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { shoplistSchema } from "@/lib/validations"
 import { useState } from "react"
-import { addShopList } from "@/lib/actions/user.action"
 import { auth } from "@clerk/nextjs/server"
 import { useRouter } from "next/navigation"
+import { addShopList } from "@/lib/actions/shopList.action"
 
 interface Props {
     clerkId: string | null
