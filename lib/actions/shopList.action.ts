@@ -2,7 +2,7 @@
 
 import ShopList from "@/database/shopList.model";
 import { connectToDatabse } from "../mongoose";
-import { addShopListParams } from "./shared.types";
+import { addShopListParams, UpdateIngredientsParams } from "./shared.types";
 import User from "@/database/user.model";
 
 // export async function getShopLists(clerkId: string | null){
@@ -103,6 +103,39 @@ export async function deleteShopLists(title: string){
         console.log(error)
     }
 }
+
+export async function updateIngredients(params: UpdateIngredientsParams){
+    try {
+        const { id, ingredients } = params
+        await connectToDatabse();
+
+        if(!id){
+            return null;
+        }
+
+        console.log("updating shop list...")
+
+        const updatedShopList = await ShopList.findByIdAndUpdate(
+            id,                           
+            { ingredients: ingredients },  
+            { new: true }                  
+        );
+
+        if (!updatedShopList) {
+            throw new Error('Shop list not found');
+        }
+
+        console.log("Shop List Updated")
+
+        return updatedShopList;
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+
 
 
 

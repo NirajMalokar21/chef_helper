@@ -24,7 +24,7 @@ export default async function ShopList () {
                         />
                     ))
                 } */}
-                <ShoplistCards userId={userId} />
+                <ShoplistCards clerkId={userId} />
                 <Link 
                     href='/create-list'
                     className="flex flex-col justify-center items-center gap-6 shadow-xl bg-background-500 dark:bg-slate-950 w-full h-[250px] rounded-2xl"

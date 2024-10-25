@@ -2,24 +2,30 @@
 import React, { useState } from 'react'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
+import { updateIngredients } from '@/lib/actions/shopList.action'
+import { Ingredient } from '@/lib/actions/shared.types'
 
-interface Ingredient {
-  name: string,
-  quantity: string | null
-}
 
-const AddIngredient = () => {
+const AddIngredient = (id: string) => {
   const [ingredients, setIngredients] = useState<Ingredient[]>([])
   const [ingredientText, setIngredientText] = useState('')
   const [quantity, setQuantity] = useState('')
   const handleClick = () => {
     if(ingredientText.length > 0) {
-      setIngredients([...ingredients, { name: ingredientText, quantity: quantity || null}])
+      setIngredients([...ingredients, { name: ingredientText, quantity: quantity || null, owned: false}])
       setIngredientText('');
       setQuantity('')
     }
   }
+
+  const handleSave = async () => {
+    await updateIngredients({
+      id: id,
+      ingredients: ingredients
+    })
+  }
   return (
+    // Add an option to cut it out whn it is not saved
     <div className="w-full max-w-[1200px] flex flex-col gap-8 justify-start items-center">
         <div className='w-full flex flex-col md:flex-row justify-start items-start gap-4'>
             <div className='w-full flex flex-col gap-3 justify-start items-start'>
@@ -41,21 +47,30 @@ const AddIngredient = () => {
                 />
             </div>
         </div>
-        <Button 
-          type='button'
-          className='bg-primary-600 dark:bg-primary-600 dark:text-light-900 font-semibold h-[50px] text-md w-full'
-          onClick={handleClick}
-        >
-          Add
-        </Button>
-        <div className='flex flex-row justify-center items-center gap-3'>
-          <ol>
+        <div className='w-full flex flex-row  gap-4 max-sm:flex-col'>
+          <Button
+            type='button'
+            className='bg-primary-600 dark:bg-primary-600 dark:text-light-900 font-semibold h-[50px] text-md w-full'
+            onClick={handleClick}
+          >
+            Add
+          </Button>
+          <Button
+            type='button'
+            className='bg-transparent dark:bg-transparent dark:text-light-900 font-semibold h-[50px] text-md w-full text-dark border-2 hover:bg-primary-100 border-primary-600'
+            onClick={handleSave}
+          >
+            Save
+          </Button>
+        </div>
+        <div>
+          <ul>
             {
               ingredients.map((item,i) => (
-                <li key={i}>{item?.quantity} {item.name}</li>
+                <li key={i}>{item.quantity} {item.name}</li>
               ))
             }
-          </ol>
+          </ul>
         </div>
     </div>
   )

@@ -4,12 +4,13 @@ import { getShopLists } from '@/lib/actions/user.action';
 import { auth } from '@clerk/nextjs/server';
 
 interface ShopListCardsProps {
-    userId: string | null
+    clerkId: string | null
 }
 
-const ShoplistCards = async ({ userId }: ShopListCardsProps) => {
+const ShoplistCards = async ({ clerkId }: ShopListCardsProps) => {
 
-    const shopLists = await getShopLists(userId)
+    const shopLists = await getShopLists(clerkId)
+    console.log(shopLists)
 
     return (
         <div className='w-full gap-6 flex flex-col'>

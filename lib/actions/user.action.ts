@@ -47,6 +47,7 @@ export async function getShopLists(clerkId: string | null){
         const user = await User.findOne({ clerkId }).select('shopLists').populate("shopLists");
 
         if (user && user.shopLists) {
+            console.log(user.shopLists)
             return user.shopLists;
         } else {
             console.log("User not found or no shop lists");

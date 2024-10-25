@@ -16,4 +16,13 @@ export interface addShopListParams{
   };
 }
   
+export interface UpdateIngredientsParams {
+  id: string;
+  ingredients: Ingredient[];
+}
   
+export interface Ingredient {
+  name: string,
+  quantity: string | null
+  owned: boolean
+}

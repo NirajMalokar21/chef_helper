@@ -11,6 +11,13 @@ interface IngredientProps {
     quantity: string
 }
 
+interface Props {
+    ingredients: [{
+        name: string,
+        quantity: string
+    }]
+}
+
 const Ingredient = ({ name, quantity }: IngredientProps) => {
     return (
         <div className='flex flex-row gap-2 justify-center items-center px-2 py-6'>
@@ -20,27 +27,10 @@ const Ingredient = ({ name, quantity }: IngredientProps) => {
     )
 }
 
-const ShopList = () => {
-  const ingredients = [
-    {
-        name: "Chicken",
-        quantity: "500gm"
-    },
-    {
-        name: "Onions",
-        quantity: "4"
-    },
-    {
-        name: "Rice",
-        quantity: "500gm"
-    },
-    {
-        name: "Coriander",
-        quantity: "250gm"
-    }
-  ]
+const ShopList = ({ingredients}: Props) => {
+  
   return (
-    <div className='flex flex-col justify-start items-start w-full max-w-[900px] min-h-screen'>
+    <div className='flex flex-col justify-start items-start w-full max-w-[900px] pb-8'>
         <h2 className='py-12 text-xl font-bold text-dark100_light900'>Ingredients to Buy</h2>
         {
             ingredients.map((item,i) => (
